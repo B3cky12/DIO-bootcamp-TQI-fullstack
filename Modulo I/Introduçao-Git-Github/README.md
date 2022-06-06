@@ -1,12 +1,13 @@
 # Introdução ao Git e ao GitHub
 
-Certificard: Introduc%CC%A7a%CC%83o%20ao%20Git%20e%20ao%20GitHub%207a2f263b4edc4226b5de791a0b443fc5/15F8929C.pdf
-Completo: Yes
-Iniciado: May 31, 2022 2:24 PM
-Materials: https://web.dio.me/course/introducao-ao-git-e-ao-github/learning/75b9fe49-6ed4-4480-83a7-7e37fc356aa9?back=/track/tqi-fullstack-developer&tab=undefined&moduleId=undefined, https://www.markdownguide.org/
-Módulo: I
-Teacher: Otávio Reis, perkles.
-Tecnologia: Git, GitHub, Markdown
+###### Iniciado: May 31, 2022 2:24 PM
+###### Completo: Yes
+###### Teacher: [Otávio Reis, perkles](https://github.com/Perkles)
+###### [Link da Aula](https://web.dio.me/course/introducao-ao-git-e-ao-github/learning/75b9fe49-6ed4-4480-83a7-7e37fc356aa9?back=/track/tqi-fullstack-developer&tab=undefined&moduleId=undefined)
+###### [Markdown](https://www.markdownguide.org/)
+###### Tecnologia: Git, GitHub, Markdown
+
+##
 
 # Entendendo o que é Git e a sua importância
 
@@ -39,19 +40,24 @@ O Git é um CLI e não um GUI, então ele não tem uma interface gráfica, o foc
 | Limpar o terminal | - cls | - clear |
 | Printa no terminal | - echo | - echo |
 
-TAB completa os nomes de forma inteligente;
+<details> 
+ <summary>Alguns tips</summary>
 
-ctrl + L limpa o terminal tbm, maas no linux;
+   TAB completa os nomes de forma inteligente;
 
-o - cd / leva pra a pasta C raíz;
+   ctrl + L limpa o terminal tbm, maas no linux;
 
-o - cd .. volta uma pasta;
+   o - cd / leva pra a pasta C raíz;
 
-“>”é um redirecionador de curso;
+   o - cd .. volta uma pasta;
 
-no windows, pra remover  de forma simples o diretório tbm eh - rmdir /S /Q, no linux eh - rm -rf;
+   “>”é um redirecionador de curso;
 
- - pwd mostra o caminho;
+   no windows, pra remover de forma simples o diretório tbm eh - rmdir /S /Q, no linux eh - rm -rf;
+
+   o - pwd mostra o caminho;
+ 
+ </details>
 
 # Entendendo como o Git funciona por baixo dos panos
 
@@ -101,7 +107,6 @@ Chave SSH é uma forma de fazer uma conexão segura e encriptada. Ela é configu
 ssh-keygen -t ed25519 -C “seu_email@gmail.com”
 ```
 
-enter enter enter
 
 ```
 cat id_ed25519.pub
@@ -117,18 +122,17 @@ eval $(ssh-agent -s)
 ssh-add id_ed25519
 ```
 
-enter
 
 Token de acesso pessoal serve como uma senha, pra autenticação antiga. Você cria um token na sua conta do GitHub e copia e cola ele em um lugar seguro.
 
 # Primeiros comandos com Git
 
 - Iniciar o git
-    - - git init
+    - git init
 - Iniciar o versionamento
-    - - git add
+    - git add
 - Criar um commit
-    - - git commit
+    - git commit
 
 <aside>
 📎 No terminal, todo comando git leva o git na frente.
@@ -140,9 +144,9 @@ flag -a mostra arquivos ocultos;
 ### Setando o email e name da autora:
 
 ```
-git config --global --add user.email "ellen.rebeca10@gmail.com"
+git config --global --add user.email "seu_email@gmail.com"
 
-git config --global user.name B3cky12
+git config --global user.name seu.username
 ```
 
 ### Adicionando um arquivo markdown:
@@ -153,15 +157,8 @@ Número de # diz o nível do texto;
 echo strogonoff > strogonoff.md
 ```
 
-//aí agora a gente vai precisar do VSCode
-
-![Untitled](Introduc%CC%A7a%CC%83o%20ao%20Git%20e%20ao%20GitHub%207a2f263b4edc4226b5de791a0b443fc5/Untitled.png)
-
-// dps volta pro git bash
-
-![Untitled](Introduc%CC%A7a%CC%83o%20ao%20Git%20e%20ao%20GitHub%207a2f263b4edc4226b5de791a0b443fc5/Untitled%201.png)
-
-23da246 é os primeiros caracteres do sha1 do commit;
+###### aí agora a gente vai precisar abrir e editar o strogonoff.md
+###### dps volta pro git bash
 
 # Ciclo de vida do git
 
@@ -183,29 +180,37 @@ git status
 mv <arquivo> ./pasta_onde_quer_colocar
 ```
 
-git add * ou . adiciona todas as mudanças untracked pra staged. Isso ajuda.
+git add * (ou '.', ou '-A') adiciona todas as mudanças untracked pra staged. Isso ajuda.
 
 # Trabalhando com GitHub
 
 Facilita a conexão entre o github e o git bash se o email e o nome do usuário são os mesmos nos dois. Da pra verificar as configurações do git bash escrevendo:
 
- - git config --list
+```
+git config --list
+```
 
 Aí, caso é preciso alterar algo nesses settings faz:
 
- - git config --global -- unset user.email
+```
+git config --global --unset user.email
 
- - git config --global -- unset user.name
+git config --global --unset user.name
+```
 
 E pronto. Pra criar os novos, já vimos.
 
 Cria o repositório remoto no github e pega o endereço dele, aí com pra apontar o remoto pro local escrevemos:
 
- - git remote add origin “EndereçoHttpsOuSsh”
+```
+git remote add origin “EndereçoHttpsOuSsh”
+```
 
 E pra ver a lista podemos fazer:
 
- - git remote -v
+```
+git remote -v
+```
 
 Lembrando que pra fazer o push, o repositório local precisa estar on branch, tudo já commitado certinho. Mas pra dar o push, também precisamos indicar o branch remoto que é pra ir.
 
@@ -218,4 +223,4 @@ Assim, se o objetivo é dar o push já no main branch. Olhando nos sha dos commi
 
 # Resolvendo conflitos no GitHub
 
-Quando se ocorre um desencontro de duas edições diferentes do mesmo arquivo, dizemos que as versões estão em conflito. Pra resolver eh manual, e só depois fazer os push necessários. O github não toma a frente pra resolver os conflitos.
+Quando se ocorre um desencontro de duas edições diferentes do mesmo arquivo, dizemos que as versões estão em conflito. Pra resolver eh manual, e só depois fazer os push necessários. O github não toma a frente pra resolver os conflitos, forçando pushes ou commits, não não. Ele espera o usuário.
