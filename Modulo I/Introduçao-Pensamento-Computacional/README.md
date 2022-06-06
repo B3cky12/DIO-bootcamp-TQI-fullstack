@@ -1,15 +1,25 @@
 # Introdução a Programação e Pensamento Computacional
 
-Certificard: Introduc%CC%A7a%CC%83o%20a%20Programac%CC%A7a%CC%83o%20e%20Pensamento%20Computac%20fa3987ed9bff4c15ba3ae0a7d99d1586/4CF27AEE.pdf
-Completo: Yes
-Iniciado: May 26, 2022 11:46 AM
-Materials: https://web.dio.me/course/introducao-a-programacao-e-pensamento-computacional/learning/285a4323-c6b0-4233-988e-4a2954065de3?back=/track/tqi-fullstack-developer&tab=undefined&moduleId=undefined, https://drive.google.com/file/d/1vemC6G790JNte1882V53DAKEawJzVIWL/view
-Módulo: I
-Teacher: Juliana Mascarenhas @in/juliana-mascarenhas-ds/
+###### Iniciado: May 26, 2022 11:46 AM
+###### Completo: Yes
+###### Teacher: [Juliana Mascarenhas](https://github.com/julianazanelatto)
+###### [Link da Aula](https://web.dio.me/course/introducao-a-programacao-e-pensamento-computacional/learning/285a4323-c6b0-4233-988e-4a2954065de3?back=/track/tqi-fullstack-developer&tab=undefined&moduleId=undefined)
+###### [Slide da Aula](https://drive.google.com/file/d/1vemC6G790JNte1882V53DAKEawJzVIWL/view)
+
+##
 
 Pensamento computacional ou lógica de programação é algo aplicável a qualquer área de conhecimento, não só para programação e TI, mas pra qualquer local onde resolução de problemas é uma skill importante.
 
-- Summary
+<details>
+    <summary>Summary</summary>
+    
+     - Pensamento Coomputacional
+     - Introdução a lógica de programação
+     - Fundamentos de Algoritmos
+     - Linguagens de Programação
+     - Primeiro contato com a Programação
+    
+</details>
 
 # Pensamento Computacional
 
@@ -95,17 +105,22 @@ Primeiro podemos identificar mecanismos, recursos comuns e os detalhes mais impo
 
 Para purificar a água, cozinhar a caça, garantir a proteção e o calor é necessário que eu tenha fogo, então fogo é um padrão, e para entender a localização eu preciso de um mapa, que pode ser criado através da abstração. Até então já fizemos decomposição, reconhecimento de padrões e abstração, agora só preciso comer. Para isso eu preciso preparar a comida, seguindo as etapas:
 
-Pescar
+#### 1° opção
+1. Pescar
+2. Limpar o peixe
+3. Assar o filé
+4. Comer
 
-Colocar água na panela | Limpar o peixe
+#### 2° opção
 
-Ferver a água
+1. Pescar
+2. Limpar o peixe
+3. Colocar água na panela 
+4. Ferver a água
+5. Fazer o cozido
+6. Comer
 
-Fazer o cozido | Assar o filé
-
-Comer
-
-E o mesmo processo vai para encontrar a água, construir o abrigo, etc.
+E o mesmo processo de pensamento vai para encontrar a água, construir o abrigo, etc.
 
 ### Aplicado: Soma de um intervalo
 
@@ -182,15 +197,7 @@ A segunda técnica é a **técnica estruturada**, que se denota na organização
 
 A terceira técnica é a **técnica modular**, que trata de partes independentes (os módulos) que são controlados por um conjunto de regras, mas cada um tem o seu próprio e específico. O modelo padrão para essa técnica é:
 
-Dados de entrada 
-
-→
-
-Processo de transformação 
-
-→
-
-Dados de saída
+Dados de entrada → Processo de transformação → Dados de saída
 
 Com essa técnica nós conseguimos:
 
@@ -349,68 +356,66 @@ Os mais utilizados nas linguagens são a orientação à objetos e o estruturado
 
 ## Algoritmos em pseudocódigo
 
-programa {
+    programa {
 
-funcao inicio() {
-    inteiro x, y
-
-    escreva(”Digite os números para executar a soma do intervalo: “)
-
-    leia(x)
-
-    leia(y)
-
-    escreva(soma_intervalo(x,y))
-}
-
-funcao inteiro soma_intervalo(inteiro x, inteiro y) {
-
-    inteiro total, resultado_parcial
-
-    total = y/2
-
-    resultado_parcial = y+x
-
+        funcao inicio() {
+            inteiro x, y
     
+            escreva(”Digite os números para executar a soma do intervalo: “)
 
-    inteiro resultado = total * resultado_parcial
+            leia(x)
 
-    retorne resultado
+            leia(y)
 
-}
+            escreva(soma_intervalo(x,y))
+        }
 
-}
+        funcao inteiro soma_intervalo(inteiro x, inteiro y) {
+
+            inteiro total, resultado_parcial
+
+            total = y/2
+
+            resultado_parcial = y+x
+
+            inteiro resultado = total * resultado_parcial
+
+            retorne resultado
+
+        }
+
+    }
 
 ;;;;
 
-programa {
+    programa {
 
-funcao inicio() {
+        funcao inicio() {
 
-    real a1, a2, b1, b2
+            real a1, a2, b1, b2
 
-    escreva (”Digite a nota p1 e p2 do aluno A: “)
+            escreva (”Digite a nota p1 e p2 do aluno A: “)
 
-    leia(a1)
+            leia(a1)
 
-    leia(a2)
+            leia(a2)
 
-    escreva(”Digite as notas da p1 e p2 do aluno B: “)
+            escreva(”Digite as notas da p1 e p2 do aluno B: “)
 
-    leia(b1)
+            leia(b1)
 
-    leia(b2)
+            leia(b2)
 
-    escreva(’Média do aluno A: “, media_aluno(a1, a2))
+            escreva(’Média do aluno A: “, media_aluno(a1, a2))
 
-    escreva(”\nMédia do aluno B: “, media_aluno(b1, b2))
+            escreva(”\nMédia do aluno B: “, media_aluno(b1, b2))
 
-}
+        }
 
-funcao real media_aluno(real nota_a, real nota_b) {
+        funcao real media_aluno(real nota_a, real nota_b) {
 
-    retorne (nota_a + nota_b)/2
+            retorne (nota_a + nota_b)/2
 
-}
+        }
 
-}
+    }
